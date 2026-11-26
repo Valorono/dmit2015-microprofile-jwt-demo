@@ -53,7 +53,7 @@ public class StudentDtoResource {
         return Response.ok(dto).build();
     }
 
-    @RolesAllowed({"Sales", "Shipping", "Administration"})
+    @RolesAllowed({"Sales", "Administration"})
     @POST    // This method only accepts HTTP POST requests.
     public Response createStudentStudent(StudentDto dto, @Context UriInfo uriInfo) {
         Student newStudent = StudentMapper.INSTANCE.toEntity(dto);
